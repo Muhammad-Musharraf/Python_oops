@@ -17,7 +17,7 @@ class student:
     def introduction(self):
         print(f"My Name is {self.name} & my Age is {self.age}")
         
-'''
+
 # creating Objects
 s1=student("Hello","Ali",25) #instance
 print(s1.greet)
@@ -75,28 +75,7 @@ permanently modifying it.
 
 p1=person("Pakistan")
 print(person.college())
- '''   
-# Abstraction 
-# Hiding the implementation details of a class and only showing the essential features to the user.
-#  1)Abstract Base Class ---> its  from abc import ABC 
-#  2)AbstractMethod ----> a method which is compusory to used in child class  
-from abc import ABC,abstractmethod
-class shape:
-    @abstractmethod
-    def printarea(ABC):
-        return 0
-class Rectangle(shape):
-    type="Rectangle"    
-    side=4
-    def __init__(self):
-        self.length = 7
-        self.width = 6
-
-    def printarea(self):
-        return self.length*self.width
-
-r1=Rectangle()
-print(r1.printarea())
+   
 
 
         
