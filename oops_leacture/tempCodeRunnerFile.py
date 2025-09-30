@@ -1,0 +1,1 @@
+print(stu1.change_calc())

@@ -25,20 +25,20 @@ print(s1.greet,s1.name)
 s1.introduction()
 # Q: Create student class that takes name & marks of 3 subjects as arguments in constructor. 
 # Then create a method to print the average.
-class students:
-    def __init__(self,math,eng,chem):
-        self.math=int(input("Enter the Math Marks "))
-        self.eng=int(input("Enter the eng Marks "))
-        self.chem=int(input("Enter the chem Marks "))
+# class students:
+#     def __init__(self,math,eng,chem):
+#         self.math=int(input("Enter the Math Marks "))
+#         self.eng=int(input("Enter the eng Marks "))
+#         self.chem=int(input("Enter the chem Marks "))
         
     
-    def avg(self):
-        marks=self.math+ self.eng+ self.chem 
-        print("The average Marks of three Subjects is ",(marks/3))
+#     def avg(self):
+#         marks=self.math+ self.eng+ self.chem 
+#         print("The average Marks of three Subjects is ",(marks/3))
 
 
-stud1=students(95,93,92)
-stud1.avg()
+#stud1=students(95,93,92)
+#stud1.avg()
 
 # 2nd Methods od this Practice Question
 class Student:
@@ -90,13 +90,80 @@ class company:
 
 c1=company("Mari Energy")
 print(c1.company_name)
-del c1.company_name
+# del c1.company_name
 print(c1.company_name) # delete c1
 
-        
+"""
+class method
+A class method is bound to the class & receives the class as an implicit first argument.
+---> Note - static method can't access or modify class state & generally for utility.
+
+class Student:
+    @classmethod
+    def college( cls):#decorator
+         pass
+
+"""
+    
+class person:
+    name="Umme-Abhiha"
 
 
+    @classmethod
+    def changename(cls,name):
+        cls.name=name
 
     
+
+
+    # def changename(self,name):
+    #     self.__class__.name="Sami"
+
+    # def changename(self,name):
+#     person.name=name
+
+p1=person()
+print(p1.changename("Uzair Khan"))
+print(p1.name)
+
+print(person.name)
+
+
+"""
+@staticmethod------------->():
+@classmethod-------------->(cls):
+@instancemethod------------>(self):
+
+"""
+class boys:
+    def __init__(self,math,phy,chem):
+        self.math=math
+        self.phy=phy
+        self.chem=chem
+
+    @property    
+    def percentage(self):
+        return str((self.phy+self.chem+self.math)/3)+ "%"
+    
+    @percentage.setter
+    def percentage(self):
+        return str((self.phy+self.chem+self.math)/3)+ "%"
+    
+
+    # def change_calc(self):
+    #     self.percentage=str((self.phy+self.chem+self.math)/3)+ "%"
+
+    
+
+    
+        
+stu1=boys(98,97,95)
+#print(stu1.change_calc())
+print(stu1.percentage)
+
+stu1.phy=86
+print(stu1.phy)
+#print(stu1.change_calc())
+print(stu1.percentage)
     
     
