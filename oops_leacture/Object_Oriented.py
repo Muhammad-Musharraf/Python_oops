@@ -75,8 +75,23 @@ permanently modifying it.
 
 p1=person("Pakistan")
 print(person.college())
-   
 
+"""
+del keyword
+Used to delete object properties or object itself.
+ syntax
+ del s1.name
+ del s1    
+
+"""
+class company:
+    def __init__(self,compant_name):
+        self.company_name=compant_name
+
+c1=company("Mari Energy")
+print(c1.company_name)
+del c1.company_name
+print(c1.company_name) # delete c1
 
         
 
