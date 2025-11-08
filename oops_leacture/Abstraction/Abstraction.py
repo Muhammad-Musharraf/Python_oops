@@ -1,8 +1,18 @@
-# Abstraction 
-# Hiding the implementation details of a class and only showing the essential features to the user.
-#  1)Abstract Base Class ---> its  from abc import ABC 
-#  2)AbstractMethod ----> a method which is compusory to used in child class  
+'''
+Abstraction:
+Data abstraction means showing only the essential features and hiding the complex internal details.
 
+Technically, in Python abstraction is used to hide the implementation details from the user and exposeonly 
+necessary parts, making the code simpler and easier to interact with.
+
+Ex:
+A smartphone is a great real-life example of data abstraction you can make calls or take photos
+ without knowing how signals or storage work. Only essential features are shown, complex details are hidden.
+
+1)Abstract Base Class ---> its  from abc import ABC ,abstractmethod---->both abstract base class & abstract method
+2)AbstractMethod ----> a method which is compusory to used in child class  
+
+'''
 import math
 from abc import ABC, abstractmethod
 
@@ -16,8 +26,8 @@ class Rectangle(Shape):
     side = 4
 
     def __init__(self):
-        self.length =  int(input("Enter the Length of the Rectangle... "))
-        self.width = int(input("Enter the Width of the Rectangle.... "))
+        self.length =  float(input("Enter the Length of the Rectangle... "))
+        self.width = float(input("Enter the Width of the Rectangle.... "))
         
 
     def printarea(self):  # Implement the abstract method
@@ -25,15 +35,15 @@ class Rectangle(Shape):
     
 class circle(Shape):
     def __init__(self):
-        self.radius = int(input("Enter the Radius of the Circle... "))
+        self.radius = float(input("Enter the Radius of the Circle... "))
 
     def printarea(self): # if I write a Abstract method .it is coumpusory to write in Every child class
-        return f"The Area of Circle is {int(math.pi*self.radius**2)}"
+        return f"The Area of Circle is {float(math.pi*self.radius**2)}"
         
 class Squre(Shape):
     def __init__(self):
-        self.length = int(input("Enter the Length of the Squre... "))
-        self.width = int(input("Enter the Width of the Squre... "))
+        self.length = float(input("Enter the Length of the Squre... "))
+        self.width = float(input("Enter the Width of the Squre... "))
 
     def printarea(self):  # Implement the abstract method
         return f"The Area of rectangle is {self.length * self.width}"

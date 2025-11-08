@@ -36,7 +36,7 @@ print(car2.name,car2.color)
 print(car1.name,car1.color)
 print(car1.start())
 print(car1.stop())
-###########
+######################
 """
 Types of Inheritance
 ---->Single Inheritance
@@ -172,7 +172,7 @@ class Project:
     def __init__(self,project_name):# multiple Inheritence
         self.project_name=project_name
 
-class Team_Lead(Employee,Project):# Hybrid Inheritence (Single inheritence + multiplr Inheritence )
+class Team_Lead(Employee,Project):# Hybrid Inheritence (Single inheritence + multiple Inheritence )
     def __init__(self, name,project_name):
         Employee.__init__(self,name)
         Project.__init__(self,project_name)

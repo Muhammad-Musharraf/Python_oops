@@ -16,12 +16,12 @@ class branch(student):
         print(f" My roll no is {self._roll_no} ") 
         # derived class only access proctected  not private
 
-# call outside the function
-# def show():
+#call outside the function
+#def show():
 #     b1=branch("Talha",53)
 #     print(b1.name,b1._roll_no)
 
-#show()
+# show()
 """
 Private Attributes can Acess two methods
  1) Name Mangling:- Name mangling in Python is a technique used to make class 
@@ -50,10 +50,10 @@ b1=branch("Talha",53,35)
 print(b1.name,b1._roll_no)
 print(b1.show())
 
-#print(s1.__age) # Error it can not be dicect access
+print(s1.__age) # Error it can not be dicect access
 
-# s2=student("faiq",25)
-# s2.display()
-# s2._roll_no=35
-# print(s2._roll_no)
-# s2.display()
+s2=student("faiq",25,38)
+
+s2._roll_no=35
+print(s2._roll_no)
+s2._student__display()

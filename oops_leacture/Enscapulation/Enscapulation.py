@@ -26,6 +26,8 @@ class Myclass:
      
 obj=Myclass(50)
 
+print(obj.ten_value)
+
 obj.ten_value=67 # setter   # error beacause they setter are not given
 
 print(obj._value)

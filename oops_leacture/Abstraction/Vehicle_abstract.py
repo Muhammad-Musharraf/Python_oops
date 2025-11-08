@@ -12,7 +12,7 @@ class bike(Vehicle):
         print(f" My Bike color is {self.color}")
 
 class car(Vehicle):
-    def __init__(self,n,x):
+    def __init__(self,n,grear):
         self.grear=6
         super().__init__(n)
         self.no_of_tyre=n

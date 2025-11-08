@@ -5,9 +5,6 @@ s1 = Student()
 print(s1.name)
 print(s1.Location)   
  
-s2 =Student()
-
-
 class Car:
     Name = "KIA Motors"
     Model = "Sportage"
@@ -17,6 +14,7 @@ c1 = Car()
 print(c1.Name)   
 print(c1.Model) 
 print(c1.year)
+
 
 class Student:
     # #default Constructor
@@ -38,6 +36,7 @@ print(s2.name, s2.Marks)
 s3 =Student("Urooj",85)
 print(s3.name,s3.Marks)
 
+
 class Student:
   name= "Musharraf"
 
@@ -55,6 +54,7 @@ c1= Car()
 print(c1.color)  
 print(c1.brand)  
 
+
 class Student:
   college_name = "Formen College" # class Arttibutes
   name = "Anonymous"
@@ -71,6 +71,7 @@ class Student:
     print(f"Congratulation {self.name} is to get a {self.marks} Marks....")
 
 s1=Student("karan",89)
+
 print(s1.name,s1.marks)
 
 s1.info()
@@ -82,7 +83,9 @@ s3=Student("Usman_Khan",86)
 print(s3.name,s3.marks)
 s3.info()
 print(Student.college_name) # call from class 
-print(s3.college_name) # call from obj both are correct 
+print(s3.college_name) # call from obj both are correct
+
+
 
 class Teacher:
   @staticmethod
@@ -103,15 +106,21 @@ class Teacher:
       
   def hello(self):
     print(f"""Hello miss/sir {self.name} you appointed as a teaacher & your are selected  a {self.sub} subjects. Thanks for providing a service 
-          of teaching""")
+of teaching""")
     
 t1= Teacher("Tahira_khan","Urdu",92)
 print("your teching test score is ",t1.get_sub())
+
 t1.display()
 t1.hello()
+t1.google()
+
+
 t2=Teacher("Anwer","Mathematics",54)
 print("your teching test score is ",t2.get_sub())
 
 t2.display()
 t2.hello()
 t2.google()
+
+

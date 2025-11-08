@@ -26,7 +26,7 @@ s1.introduction()
 # Q: Create student class that takes name & marks of 3 subjects as arguments in constructor. 
 # Then create a method to print the average.
 # class students:
-#     def __init__(self,math,eng,chem):
+#     def __init__(self):
 #         self.math=int(input("Enter the Math Marks "))
 #         self.eng=int(input("Enter the eng Marks "))
 #         self.chem=int(input("Enter the chem Marks "))
@@ -34,11 +34,11 @@ s1.introduction()
     
 #     def avg(self):
 #         marks=self.math+ self.eng+ self.chem 
-#         print("The average Marks of three Subjects is ",(marks/3))
+#         print("The average Marks of three Subjects is ",round((marks/3),2))
 
 
-#stud1=students(95,93,92)
-#stud1.avg()
+# stud1=students()
+# stud1.avg()
 
 # 2nd Methods od this Practice Question
 class Student:
@@ -49,7 +49,7 @@ class Student:
         sum=0
         for val in self.marks:
             sum+=val
-        print(f"My Name is {self.name} and your Average Score is {sum/3}") 
+        print(f"My Name is {self.name} and your Average Score is {round((sum/3),2)}%") 
     
 
 #objects
@@ -59,12 +59,13 @@ S1.get_avg()
 # Static Methods
 # Methods that don’t use the self parameter (work at class level)
 class person:
+    name='Ali'
     def __init__(self,country):
         self.country=country
 
     @staticmethod   # decorator
     def college():
-        print("Bharia College") # it does not allow objects parameter and it works only class level
+        print(f"{person.name}  Bharia College") # it does not allow objects parameter and it works only class level
 
 """
 Decorators allow us to wrap another function in order to
@@ -75,6 +76,7 @@ permanently modifying it.
 
 p1=person("Pakistan")
 print(person.college())
+print(p1.college())
 
 """
 del keyword
@@ -92,6 +94,7 @@ c1=company("Mari Energy")
 print(c1.company_name)
 # del c1.company_name
 print(c1.company_name) # delete c1
+
 
 """
 class method
@@ -119,11 +122,12 @@ class person:
     # def changename(self,name):
     #     self.__class__.name="Sami"
 
-    # def changename(self,name):
-#     person.name=name
+    def change(self,name):
+        person.name=name
 
 p1=person()
-print(p1.changename("Uzair Khan"))
+print(p1.name)
+print(p1.change("Uzair Khan"))
 print(p1.name)
 
 print(person.name)
@@ -152,18 +156,24 @@ class boys:
 
     # def change_calc(self):
     #     self.percentage=str((self.phy+self.chem+self.math)/3)+ "%"
+    #     return self.percentage
 
     
 
     
         
 stu1=boys(98,97,95)
-#print(stu1.change_calc())
+# print(stu1.change_calc())
+
 print(stu1.percentage)
 
 stu1.phy=86
 print(stu1.phy)
 #print(stu1.change_calc())
+
+# stu1.math=76
+# print(stu1.change_calc())
+
 print(stu1.percentage)
     
     

@@ -8,7 +8,7 @@ class Student:
         sum=0
         for var in self.marks:
             sum+=var 
-        print(f"hi {self.name }, your avg marks is " , {sum/3})
+        print(f"hi {self.name }, your avg marks is " , round(sum/3,2))
         
 s1= Student("Musharraf",[89,70,83])
 #print(s1.name)
@@ -21,34 +21,32 @@ s1.get_avg()
 class Account:
    
     def __init__(self):
-        self.balance =int(input("enter the balance Amount"))
-        self.Acc_num =int(input("Enter your account number"))
-    @staticmethod
-    def veiw():
-        check=input("Choose anyone card that is debit or credit")
-        if check=="debit card":
-            debit()
-        elif check=="credit card":
-            credit()
+        self.balance =int(input("enter the balance Amount... "))
+        self.Acc_num =int(input("Enter your account ....  "))
     
+    def view(self):
+        check = input("Choose a card type (debit or credit): ").strip().lower()
+        if check == "debit":
+            return self.debit()
+        elif check == "credit":
+            return self.credit()
+        else:
+            print("Invalid choice. Please type 'debit' or 'credit'.")
+            return None
     
     
     def debit(self):
-        d=int(input("how much amount you want to debit"))
+        d=int(input("how much amount you want to debit... "))
         a= self.balance-d
         print("your remaining balance amount is : ", a)
         
     def credit(self):
-        c= int(input("Enter the amount you credit....."))
-        b = self.balance-c
-        print("your remaining balance amount is : ",b)
+        c= int(input("Enter the amount you credit.....  "))
+        b = self.balance+c
+        print("your remaining balance amount is :   ",b)
         
 acc1= Account()
-
-veiw()
-
-debit()
-credit()
+acc1.view()
 
         
             

@@ -77,7 +77,7 @@ class cat:
     def Speak(self):
         print("Meow Meow")
     
-
+# Normal Function
 def display(obj):
     obj.swim()
     obj.Speak()
@@ -158,8 +158,8 @@ class B(A):
 class1=B()
 class1.show()
 
-class1=A()
-class1.show()
+class2=A()
+class2.show()
 #######################################
 class FAther:
     def sleep(self):
@@ -227,8 +227,18 @@ print(d.Add(2,3,4))
 print(d.Add(2,3,4,7,8,9))
 print(d.Add(2,3,4,7,8,99,776))
 
+"""
+Operator Overloading:-
+Method Overloading is an example of Compile time polymorphism.
+ In this, more than one method of the same class shares the same method name having different signatures.
+Method overloading is used to add more to the behavior of methods and there is no need of more than one 
+class for method overloading.
 
-# Operator Overloading
+Note: Python does not support method overloading. We may overload the methods but can only
+use the latest defined method.
+
+
+"""
 
 
 import math
@@ -259,11 +269,6 @@ class Vector:
     
     # def diatance(self):
     #     return math.sqrt((self.i)**2+(self.j)**2+(self.k)**2)
-
-    
-
-
-   
 
     def __add__(self,x):
         return Vector(self.i+x.i,self.j+x.j,self.k+x.k)
